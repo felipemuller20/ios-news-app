@@ -22,6 +22,7 @@
 		55864A1B2A6F0B1A008F96D2 /* NewsListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55864A1A2A6F0B1A008F96D2 /* NewsListRepository.swift */; };
 		55864A1E2A6F3078008F96D2 /* GenericDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55864A1D2A6F3078008F96D2 /* GenericDataProvider.swift */; };
 		55864A202A6F310B008F96D2 /* NewsListLocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55864A1F2A6F310B008F96D2 /* NewsListLocalDataProvider.swift */; };
+		559879E82A71C77E00BDE5DD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559879E72A71C77E00BDE5DD /* NewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		55864A1A2A6F0B1A008F96D2 /* NewsListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRepository.swift; sourceTree = "<group>"; };
 		55864A1D2A6F3078008F96D2 /* GenericDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataProvider.swift; sourceTree = "<group>"; };
 		55864A1F2A6F310B008F96D2 /* NewsListLocalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListLocalDataProvider.swift; sourceTree = "<group>"; };
+		559879E72A71C77E00BDE5DD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				558649FF2A6EFFD1008F96D2 /* NewsListViewController.swift */,
 				557A3C602A70454600275AD0 /* NewsTableViewCell.swift */,
+				559879E72A71C77E00BDE5DD /* NewsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				55864A002A6EFFD1008F96D2 /* NewsListViewController.swift in Sources */,
 				558649FC2A6EFFD1008F96D2 /* AppDelegate.swift in Sources */,
 				55864A162A6F0736008F96D2 /* SourceModel.swift in Sources */,
+				559879E82A71C77E00BDE5DD /* NewsViewController.swift in Sources */,
 				55864A202A6F310B008F96D2 /* NewsListLocalDataProvider.swift in Sources */,
 				558649FE2A6EFFD1008F96D2 /* SceneDelegate.swift in Sources */,
 				55864A1E2A6F3078008F96D2 /* GenericDataProvider.swift in Sources */,

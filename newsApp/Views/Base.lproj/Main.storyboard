@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.5568627451" alpha="0.85160389072847675" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" red="0.0" green="0.51372549019607838" blue="0.55686274509803924" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.0" green="0.58431372549019611" blue="0.63137254901960782" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IiK-nd-t9r">
                         <autoresizingMask key="autoresizingMask"/>
@@ -43,7 +43,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.5568627451" alpha="0.85160389069999998" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.0" green="0.58431372549019611" blue="0.63137254901960782" alpha="0.85160389072847675" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dGC-zw-QO1" secondAttribute="trailing" id="4XI-6I-jZx"/>
                             <constraint firstItem="dGC-zw-QO1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MUZ-Wo-nk9"/>
@@ -54,11 +54,28 @@
                     <navigationItem key="navigationItem" title="Notícias" id="wJ1-hT-hKx"/>
                     <connections>
                         <outlet property="NewsListTableView" destination="dGC-zw-QO1" id="HTp-h8-Uhp"/>
+                        <segue destination="2gh-Hn-7yb" kind="show" identifier="ShowNewsViewController" id="KIa-kW-rIT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+        <!--Título-->
+        <scene sceneID="LwN-3m-e34">
+            <objects>
+                <viewController id="2gh-Hn-7yb" customClass="NewsViewController" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkJ-WD-eMT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tSb-lQ-Bdw"/>
+                        <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.63137254899999995" alpha="0.85160389069999998" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Título" id="zqy-dj-B1Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nh7-bl-kdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="-34"/>
         </scene>
     </scenes>
     <resources>

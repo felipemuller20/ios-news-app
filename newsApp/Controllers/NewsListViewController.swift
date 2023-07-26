@@ -74,6 +74,6 @@ extension NewsListViewController: UITableViewDataSource {
 
 extension NewsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // Função para quando selecionar uma tablerow
-        print("Selecionou uma TableRow")
+        performSegue(withIdentifier: "ShowNewsViewController", sender: nil) // ShowNewsViewController é o identifier que demos pro "tracinho" (segue) lá nas views
     }
 }
