@@ -24,6 +24,12 @@ class NewsListViewController: UIViewController {
         self.setupTableView()
         self.initLocalDataProvider() // executa a função criada para inicializar os valores
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // Criar essa função para permitir que acessemos a NewsViewController corretamente
+        if segue.identifier == "ShowNewsViewController", let destination = segue.destination as? NewsViewController {
+            destination.news = sender as? NewsModel
+        } // Verificação é importante pois podem existir vários segues. Tanto destination quanto o segue
+    }
 
     private func setupTableView() {
         self.NewsListTableView.delegate = self // Sempre que clicar em algo na tela, o delegate irá realizar uma ação. No caso, o próprio ViewController
@@ -65,8 +71,8 @@ extension NewsListViewController: UITableViewDataSource {
             fatalError("Unable to find news")
         }
         
-        cell.news = newsList[indexPath.row] // Passa o valor da cell para o CellList
-
+        cell.news = newsList[indexPath.row] // Passa o valor da cell para o CellList (define o que é uma cell, no caso, possui os valores da newsList)
+        cell.selectionStyle = .none // Tira o estilo ao selecionar uma cell
         return cell
         
     }
@@ -74,6 +80,11 @@ extension NewsListViewController: UITableViewDataSource {
 
 extension NewsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // Função para quando selecionar uma tablerow
-        performSegue(withIdentifier: "ShowNewsViewController", sender: nil) // ShowNewsViewController é o identifier que demos pro "tracinho" (segue) lá nas views
+        guard let newsList = newsList else { // Garante que existe newsList
+            fatalError("Selected news not found.")
+        }
+        performSegue(withIdentifier: "ShowNewsViewController", sender: newsList[indexPath.row]) // ShowNewsViewController é o identifier que demos pro "tracinho" (segue) lá nas views
+        // no sender: estamos informando que, ao acessar a nova view, o valor de newsList[indexPath.row] seja enviado para essa view.
+        // para funcionar, precisamos criar a função "prepare"
     }
 }

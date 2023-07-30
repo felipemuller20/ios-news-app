@@ -17,6 +17,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.5568627451" alpha="0.85160389072847675" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.0" green="0.58431372549019611" blue="0.63137254901960782" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IiK-nd-t9r">
                         <autoresizingMask key="autoresizingMask"/>
@@ -68,16 +74,56 @@
                     <view key="view" contentMode="scaleToFill" id="jkJ-WD-eMT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4T-AO-9gh">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O01-9O-0jb">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hRi-uy-yGg">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.58431372550000005" blue="0.63137254899999995" alpha="0.85160389069999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="hRi-uy-yGg" firstAttribute="centerX" secondItem="O01-9O-0jb" secondAttribute="centerX" id="Wat-7E-5oi"/>
+                                    <constraint firstItem="hRi-uy-yGg" firstAttribute="centerY" secondItem="O01-9O-0jb" secondAttribute="centerY" id="ooJ-Qn-3nd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tSb-lQ-Bdw"/>
                         <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.63137254899999995" alpha="0.85160389069999998" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="O01-9O-0jb" firstAttribute="height" secondItem="jkJ-WD-eMT" secondAttribute="height" id="3db-MP-DmN"/>
+                            <constraint firstItem="O01-9O-0jb" firstAttribute="width" secondItem="jkJ-WD-eMT" secondAttribute="width" id="B9N-ZN-Ia7"/>
+                            <constraint firstItem="O01-9O-0jb" firstAttribute="centerY" secondItem="jkJ-WD-eMT" secondAttribute="centerY" id="DNz-Di-fq5"/>
+                            <constraint firstItem="O01-9O-0jb" firstAttribute="centerX" secondItem="jkJ-WD-eMT" secondAttribute="centerX" id="FEm-yc-cpR"/>
+                            <constraint firstItem="tSb-lQ-Bdw" firstAttribute="bottom" secondItem="P4T-AO-9gh" secondAttribute="bottom" id="TMs-Cl-c43"/>
+                            <constraint firstItem="tSb-lQ-Bdw" firstAttribute="trailing" secondItem="P4T-AO-9gh" secondAttribute="trailing" id="Y0t-0K-TcT"/>
+                            <constraint firstItem="P4T-AO-9gh" firstAttribute="top" secondItem="tSb-lQ-Bdw" secondAttribute="top" id="dnF-Ra-xm9"/>
+                            <constraint firstItem="P4T-AO-9gh" firstAttribute="leading" secondItem="tSb-lQ-Bdw" secondAttribute="leading" id="esH-mL-gnQ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Título" id="zqy-dj-B1Y"/>
+                    <navigationItem key="navigationItem" title="Título" largeTitleDisplayMode="never" id="zqy-dj-B1Y"/>
+                    <connections>
+                        <outlet property="loadingActivityIndicator" destination="hRi-uy-yGg" id="zyI-XC-dlq"/>
+                        <outlet property="loadingView" destination="O01-9O-0jb" id="DhS-8D-et5"/>
+                        <outlet property="newsWebView" destination="P4T-AO-9gh" id="DO2-Bu-RpG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nh7-bl-kdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="-34"/>
+            <point key="canvasLocation" x="1095.4198473282443" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

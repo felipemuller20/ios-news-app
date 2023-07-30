@@ -42,8 +42,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GFa-8h-q8D" userLabel="Stack View Title">
-                                <rect key="frame" x="0.0" y="52.333333333333329" width="658" height="41.333333333333329"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GFa-8h-q8D" userLabel="Stack View Title">
+                                <rect key="frame" x="0.0" y="42" width="658" height="41.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyL-xM-6t5">
                                         <rect key="frame" x="0.0" y="0.0" width="658" height="21.666666666666668"/>
@@ -59,8 +59,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="98H-7G-BPb" userLabel="Stack View Contents">
-                                <rect key="frame" x="0.0" y="112" width="658" height="266"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="98H-7G-BPb" userLabel="Stack View Contents">
+                                <rect key="frame" x="0.0" y="91.333333333333343" width="658" height="286.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QTG-S5-WxX">
                                         <rect key="frame" x="0.0" y="0.0" width="658" height="240"/>
@@ -68,17 +68,18 @@
                                             <constraint firstAttribute="height" constant="240" id="63G-fK-34C"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bZ4-lb-Yzm">
-                                        <rect key="frame" x="0.0" y="244" width="658" height="22"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bZ4-lb-Yzm">
+                                        <rect key="frame" x="0.0" y="264.66666666666669" width="658" height="22"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yb0-1W-3Kl">
                                                 <rect key="frame" x="0.0" y="0.0" width="632" height="22"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ui7-JI-zop">
                                                 <rect key="frame" x="636" y="-3.5527136788005009e-15" width="22" height="22.333333333333336"/>
+                                                <color key="tintColor" systemColor="linkColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="PQN-Re-JtR"/>
                                                     <constraint firstAttribute="height" constant="22" id="kwu-3r-LGm"/>
@@ -87,6 +88,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="bZ4-lb-Yzm" firstAttribute="top" secondItem="QTG-S5-WxX" secondAttribute="bottom" id="S0R-73-gUq"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                     </stackView>
@@ -113,6 +117,9 @@
     </objects>
     <resources>
         <image name="link" catalog="system" width="128" height="124"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
